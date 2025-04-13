@@ -1,124 +1,120 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Sora", sans-serif;
-  }
-  
-  body {
-    background: linear-gradient(to right, #141e30, #243b55);
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Nav styles */
-  .nav {
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: #1f2c3a;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  }
-  
-  #btn {
-    background-color: #00bcd4;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #btn:hover {
-    background-color: #0097a7;
-  }
-  
-  /* Main container */
-  .container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Clock card style */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav styles */
+.nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #1f2c3a;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#btn {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn:hover {
+  background-color: #0097a7;
+}
+
+/* Main container */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Clock card style */
+.clockcontainer {
+  display: flex;
+  background-color: #1e2a38;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Sidebar with icons */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 1rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.dot {
+  background-color: #00bcd4;
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.dot i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.dot:hover {
+  transform: scale(1.1);
+}
+
+/* Clock display */
+.clock {
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.clock span {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .clockcontainer {
-    display: flex;
-    background-color: #1e2a38;
-    padding: 2rem 3rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    gap: 2rem;
-    align-items: center;
-  }
-  
-  /* Sidebar with icons */
-  .sidebar {
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding-right: 1rem;
-    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
   }
-  
-  .dot {
-    background-color: #00bcd4;
-    padding: 0.6rem;
-    border-radius: 50%;
-    display: flex;
+
+  .sidebar {
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
     justify-content: center;
-    align-items: center;
-    transition: transform 0.2s;
   }
-  
-  .dot i {
-    font-size: 1.2rem;
-    color: white;
-  }
-  
-  .dot:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Clock display */
-  .clock {
-    font-size: 3.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-  }
-  
-  .clock span {
-    font-size: 1.2rem;
-    color: #ccc;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .clockcontainer {
-      flex-direction: column;
-      padding: 2rem;
-    }
-  
-    .sidebar {
-      flex-direction: row;
-      border-right: none;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-      padding-bottom: 1rem;
-      justify-content: center;
-    }
-  }
-  
+}
